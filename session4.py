@@ -109,19 +109,46 @@ class Qualean:
         return self.img_part > other.img_part
 
     def __invertsign__(self):
+        '''
+        Changes the sign of the imaginary part of Qualean class input
+        :return:
+        '''
         return self.img_part * -1
 
     def __le__(self, other):
+        '''
+        Checks for lesser than or equality of two different outputs from Qualean
+        :param other:
+        :return:
+        '''
         return self.img_part <= other.img_part
 
     def __lt__(self, other):
+        '''
+        Checks for lesser than of two different outputs from Qualean
+        :param other:
+        :return:
+        '''
         return self.img_part < other.img_part
 
     def __mul__(self, other):
+        '''
+        Multiples two Qualeans
+        :param other:
+        :return:
+        '''
         return self.img_part * other.img_part
 
     def __sqrt__(self):
+        '''
+        Provides square root of the imaginary number stored as part of Qualean input
+        :return:
+        '''
         return cmath.sqrt(self.img_part)
 
     def __bool__(self):
+        '''
+        Checks for boolean
+        :return:
+        '''
         return self.val != 0
